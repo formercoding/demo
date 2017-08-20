@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .wrap {
+            position: relative;
+            height: 300px;
+        }
+        .heart-shape {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 140px;
+            height: 140px;
+            font-size: 18px;
+            color: white;
+            line-height: 140px;
+            background: rgb(255, 20, 147);
+            transform: translate(-50%, -50%) rotate(45deg); 
+        }
+        .heart-shape:before,
+        .heart-shape:after {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            top: 0;
+            left: -70px;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: rgb(255, 20, 147);
+        }
+        .heart-shape:after {
+            top: -70px;
+            left: 0px;
+        }
+        .bubbly {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 260px;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+            font-size: 200%;
+            background: #0ab;
+            transform: translate(-50%,-50%);
+        }
+        .bubbly:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin: 0 0 -34px -17px;
+            border-top: 34px solid #0ab;
+            border-right: 34px solid transparent;
+        }
+        .notching {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 160px;
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+            font-size: 200%;
+            transform: translate(-50%, -50%)
+        }
+        .notching {
+            background: linear-gradient(135deg, transparent 15px, deeppink 0) top left,
+            linear-gradient(-135deg, transparent 15px, deeppink 0) top right,
+            linear-gradient(-45deg, transparent 15px, deeppink 0) bottom right,
+            linear-gradient(45deg, transparent 15px, deeppink 0) bottom left;
+            background-size: 50% 50%;
+            background-repeat: no-repeat;
+            
+           
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="wrap">
+        <div class="heart-shape">.heartShape</div> 
+    </div>
+    <div class="wrap">
+            <div class="bubbly">.bubbly</div> 
+    </div>
+    <div class="wrap">
+            <div class="notching">.notching</div> 
+    </div>
+</body>
+</html>
