@@ -1,0 +1,90 @@
+body, div, form, h1, h2, h3, h4, h5, h6, p, ol, ul, li, img, table, tr, td, canvas, audio, video,
+header, nav, article, aside, footer {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
+}
+article, aside, canvas, details, footer, header, nav {
+    display: block;
+}
+ul, ol {
+    list-style: none;
+}
+a {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+body {
+    font-family: 'Microsoft YaHei';
+    font-size: 12px;
+    header {
+        width: 100%;
+        height: 100vh;
+        background: url(index/banner.gif);
+    }
+    main {
+        width: 100%;
+        height: 100vh;
+        background: pink;
+        .items {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: left;
+            width: 100%;
+            height: 100%;
+            padding: 2% 5%;
+            background: #fff;
+            .item {
+                flex: 0 1 23%;
+                height: 50%;
+                margin: 1%;
+                overflow: hidden;
+                background: url('resource/shape/1.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                color: #fff;
+                .title {
+                    height: 100%;
+                    font-size: 26px;
+                    text-align: center;
+                    background: rgba(0, 0, 0, 0.6);
+                }
+                .title:after {
+                    display: inline-block;
+                    width: 0;
+                    height: 100%;
+                    vertical-align: middle;
+                    content:"";
+                }
+                .detail {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 0;
+                    padding: 0 10px;
+                    overflow: hidden;
+                    font-size: 20px;
+                    line-height: 30px;
+                    text-indent: 20px;
+                    cursor: pointer;
+                }
+                &:hover {
+                    .title {
+                        height: 0;
+                        color: rgba(0, 0, 0, 0);
+                        transition: all 1s;
+                    }
+                    .detail {
+                        height: 100%;
+                        background: rgba(0, 0, 0, 0.8);
+                        transition: height all 1s;
+                    }
+                }
+            }
+        }
+    }
+}
